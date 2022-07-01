@@ -1,12 +1,9 @@
 # @param {Integer[]} nums
 # @return {Integer}
 def pivot_index(nums)
-  
   total_sum = nums.sum
   left_sum, right_sum = 0, 0
-  
-  p total_sum
-  
+
   nums.each_with_index do |n, i|
     if (i == 0) 
       left_sum = 0
@@ -18,9 +15,6 @@ def pivot_index(nums)
       left_sum += nums[i - 1]
       right_sum -= n
     end
-    
-    p [left_sum, right_sum]
-    
     return i if (right_sum == left_sum)
   end
   
