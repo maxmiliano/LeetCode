@@ -11,13 +11,10 @@
 def is_palindrome(head)
   n = head  
   s = []
-  
   s << head.val.to_s
-  
   while n = n.next do
     s << n.val.to_s
   end
-  # p s 
   s == s.reverse
   
 end
