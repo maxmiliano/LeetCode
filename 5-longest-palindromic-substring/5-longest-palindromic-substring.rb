@@ -3,7 +3,7 @@
 def longest_palindrome(s)
   n = s.length
   
-  return s if n < 2
+  return s if n < 2 # if s has only one char, it is the longest palindrome
   
   max_length = 1
   max_start = 0
