@@ -27,15 +27,10 @@ def longest_palindrome(s)
     end
     
     length = right - left - 1
-    # p [i, length, max_length, s[left + 1, length]]
-    
     if (max_length < length)
       max_length = length
       max_start = left + 1
-      # p "current max: #{s[max_start, max_length]}"
     end
   end
-  
   s[max_start, max_length]
-  
 end
