@@ -6,8 +6,6 @@
 def merge(nums1, m, nums2, n)
   n1 = nums1.first(m)
   n2 = nums2.first(n)
-#   p [a1, a2]
-#   merged = merge_sorted(a1, a2)
 
   i = 0
   j = 0
@@ -22,5 +20,4 @@ def merge(nums1, m, nums2, n)
       k += 1
     end
   end
-
 end
