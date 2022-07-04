@@ -9,8 +9,6 @@
 # @param {ListNode} head
 # @return {ListNode}
 def middle_node(head)
-  hash = Hash.new
-  
   current_node = head
   middle_so_far = head
   return head if head.next.nil?
