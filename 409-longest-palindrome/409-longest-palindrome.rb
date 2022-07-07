@@ -8,7 +8,7 @@ def longest_palindrome(s)
   letters = chars.tally # count each uniq letter
 
   evens, odds = letters.partition { |k, v| v.even? }.map(&:to_h)
-  p [odds, evens]
+  # p [odds, evens]
   
   result = evens.values.sum # Evens letter make palindromes
 
