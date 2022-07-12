@@ -24,7 +24,7 @@ def remove_elements(head, val)
         prev.next = current = current.next
       end
     else
-      # current != val, let's keep moving
+      # current.val != val, let's keep moving
       prev = current
       current = current.next 
     end
