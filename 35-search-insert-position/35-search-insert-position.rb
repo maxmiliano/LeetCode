@@ -2,12 +2,9 @@
 # @param {Integer} target
 # @return {Integer}
 def search_insert(nums, target)
-
   left = 0
   right = nums.length - 1
-  
   i = 0
-  
   while (left <= right)
     i = (left + right) / 2
     
@@ -19,11 +16,11 @@ def search_insert(nums, target)
       right -= 1
     end
   end
-  
+
   if target < nums[i]
     return i
   else
     return i + 1
   end
-  
+
 end
