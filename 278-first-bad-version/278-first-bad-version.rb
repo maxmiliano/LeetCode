@@ -13,10 +13,7 @@ def first_bad_version(n)
   
   while (left <= right) 
     i = (left + right) / 2
-    
-    # p [i, bv_api_cache]
     is_bad = is_bad_version_with_cache(i, bv_api_cache)
-
     offset = (right - left) / 2
     offset = 1 if offset == 0
     if !is_bad
@@ -26,7 +23,6 @@ def first_bad_version(n)
       right -= offset
     end
   end
-  
 end
 
 def is_bad_version_with_cache(i, cache)
