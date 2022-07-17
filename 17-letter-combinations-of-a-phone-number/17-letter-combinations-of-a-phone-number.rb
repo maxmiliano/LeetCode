@@ -29,7 +29,7 @@ def cached_letter_combinations(map, digits)
   map[left] ||= cached_letter_combinations(map, left)
   map[right] ||= cached_letter_combinations(map, right)
   
-  p [digits, map]
+  # p [digits, map]
   
   return map[left]
     .product(map[right])
