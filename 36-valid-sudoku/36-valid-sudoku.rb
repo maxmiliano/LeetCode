@@ -5,7 +5,7 @@ def is_valid_sudoku(board)
   cols = Array.new(9) { Array.new }
   boxes = Array.new(9) { Array.new }
   
-  # We'll build arrays of lines, cols and boxes
+  # Build arrays of lines, cols and boxes
   # only with valid digits (excluding ".")
   board.each_with_index do |line, i|
     lines[i] = line.each.select{ |c| c != "." }
@@ -14,9 +14,7 @@ def is_valid_sudoku(board)
       boxes[find_box_index(i,j)].push(c) if c != "."
     end
   end
-
   return validate(lines) && validate(cols) && validate(boxes)
-
 end
   
 def validate(arr) 
