@@ -16,7 +16,6 @@ def intersect(nums1, nums2)
   end
   
   result = nums1.intersection(nums2).map do |item|
-    # p [item, hash_1[item], hash_2[item]]
     Array.new([hash_1[item], hash_2[item]].min, item)
   end.flatten
   
