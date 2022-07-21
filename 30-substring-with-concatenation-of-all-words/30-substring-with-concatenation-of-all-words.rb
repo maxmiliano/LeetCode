@@ -11,7 +11,6 @@ def find_substring(s, words)
   while (i <= s.length - substring_size)
     sub = s[i, substring_size]
     sub_array = split_string(sub, word_length)
-    # p [i, sub, sub_array]
     sol << i if are_equal(sub_array, words)
     i += 1
   end
@@ -30,8 +29,6 @@ def are_equal(arr1, arr2)
   
   # check size
   return false unless (arr1.length == arr2.length)
-  
-  # p [arr1, arr2]
   
   # sort to make comparison easier
   arr1.sort!
