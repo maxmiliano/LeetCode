@@ -13,14 +13,14 @@ def inorder_traversal(root)
   
   inorder_values = Array.new
   
-  inorder(inorder_values, 0, root)
+  inorder(inorder_values, root)
   
   return inorder_values 
 end
 
-def inorder(values, order, node)
+def inorder(values, node)
   return if node.nil?
-  inorder(values, order - 1, node.left)
+  inorder(values, node.left)
   values << node.val
-  inorder(values, order + 1, node.right)
+  inorder(values, node.right)
 end
