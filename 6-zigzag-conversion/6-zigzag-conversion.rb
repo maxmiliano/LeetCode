@@ -5,7 +5,7 @@ def convert(s, num_rows)
   
   down = true
   i, j = 0, 0
-  sol = Array.new(num_rows) {Array.new(s.length) {''}}
+  sol = Array.new(num_rows) {Array.new() {''}}
   
   return s if (num_rows == 1)
   
