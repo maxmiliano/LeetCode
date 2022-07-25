@@ -11,5 +11,4 @@ def search_range(nums, target)
   end
   
   return [first, i-1]
-  
 end
