@@ -16,5 +16,4 @@ def is_palindrome(head)
     s << n.val.to_s
   end
   s == s.reverse
-  
 end
