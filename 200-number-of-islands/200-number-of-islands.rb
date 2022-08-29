@@ -5,6 +5,7 @@ def num_islands(grid)
   m = grid.length
   n = grid[0].length
   
+  # Visited lands
   visited = Array.new(m) { Array.new(n) { false } }
   islands = 0
   
@@ -24,8 +25,7 @@ end
 def visit_island(grid, visited, i, j, m, n)
   visited[i][j] = true
   
-  # p [i, j, "visited"]
-  
+
   visit_island(grid, visited, i+1, j, m, n) if ((i+1 < m) && (grid[i+1][j] == "1") && !visited[i+1][j])
   visit_island(grid, visited, i-1, j, m, n) if ((i-1 >= 0) && (grid[i-1][j] == "1") && !visited[i-1][j])
   visit_island(grid, visited, i, j+1, m, n) if ((j+1 < n) && (grid[i][j+1] == "1") && !visited[i][j+1])
