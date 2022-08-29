@@ -5,9 +5,7 @@ def plus_one(digits)
 end
 
 def plus_one_at(digits, i)
-  
-  p [digits, i]
-  
+
   digits[i] = digits[i] + 1
 
   if digits[i] >= 10
