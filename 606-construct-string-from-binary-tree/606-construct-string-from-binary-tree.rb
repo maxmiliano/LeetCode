@@ -15,7 +15,6 @@ def tree2str(root)
   
   sol = root.val.to_s
   
-  
   sol << "(#{tree2str(root.left)})" unless (root.left.nil?)
   unless (root.right.nil?)
     sol << "()" if root.left.nil?
@@ -23,5 +22,4 @@ def tree2str(root)
   end
   
   return sol
-  
 end
